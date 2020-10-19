@@ -5,12 +5,20 @@
 </head>
 <body>
 
-<h1>Email Validate</h1>
-<h3 style="color:red">${message}</h3>
+<h1>Sandwich Condiments</h1>
 
-<form action="validate" method="post">
-    <input type="text" name="email"><br>
-    <input type="submit" value="Validate">
+
+<form action="/list" >
+    <input type="checkbox" id="lettuce" name="sandwich" value="Lettuce">
+    <label for="lettuce"> Lettuce</label>
+    <input type="checkbox" id="tomato" name="sandwich" value="Tomato">
+    <label for="tomato"> Tomato</label>
+    <input type="checkbox" id="mustard" name="sandwich" value="Mustard">
+    <label for="mustard"> Mustard</label>
+    <input type="checkbox" id="sprouts" name="sandwich" value="Sprouts">
+    <label for="sprouts"> Sprouts</label>
+    <br><hr><br>
+    <input type="submit" value="Save">
 </form>
 
 </body>
