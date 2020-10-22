@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Blog</title>
+</head>
+<body>
+<h1>Create Blog</h1>
+<header th:replace="~{common::headerBlog}"></header>
+<form action="/blog/create" method="post" th:object="${blog}">
+    <label for="postName"> Post Name: </label>
+    <input id="postName" th:field="*{postName}" />
+    <br/>
+    <br/>
+    <label for="content_blog"> Content Blog: </label>
+    <input id="content_blog" th:field="*{content_blog}" /><br/>
+    <br/>
+    <label for="dateCreate"> Date Create: </label>
+    <input type="date" id="dateCreate" th:field="*{dateCreate}" /><br/>
+    <br/>
+
+    <label for="category"> Category : </label>
+    <select id="category" th:field="*{category}">
+        <option th:each="category : ${listCategory} "
+                th:value="${category.idCategory}" th:text="${category.nameCategory}"></option>
+
+    </select>
+    <br>
+    <input type="submit" value="Save"/>
+</form>
+<footer th:replace="~{common::footerBlog}"></footer>
+</body>
+</html>
