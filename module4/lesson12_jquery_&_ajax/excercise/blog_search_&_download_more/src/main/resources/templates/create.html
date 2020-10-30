@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+<header th:replace="common::headerBlog"></header>
+<form action="/blog/create" method="post" th:object="${blog}">
+    <p>Name Blog:</p>
+    <input type="text" th:field="*{name_blog}"/>
+    <p style="color: red" th:if="${#fields.hasErrors('name_blog')}" th:errors="*{name_blog}"></p>
+    <!--        <input type="text" th:field="${student.name}"/>-->
+    <p>Content:</p>
+    <input type="text" th:field="*{content}" />
+    <!--        <input type="date" th:field="${student.dateOfBirth}"/>-->
+    <p>Date Create:</p>
+    <input type="date" th:field="*{date_create}" />
+<!--    <select th:field="*{classStudent}">-->
+<!--        <option th:each="classStudent : ${listClassStudent}"-->
+<!--                th:value="${classStudent.id}" th:text="${classStudent.name}"></option>-->
+<!--    </select>-->
+    <br>
+    <input type="submit" value="Save" />
+
+</form>
+<footer th:replace="common::footerBlog"></footer>
+</body>
+</html>

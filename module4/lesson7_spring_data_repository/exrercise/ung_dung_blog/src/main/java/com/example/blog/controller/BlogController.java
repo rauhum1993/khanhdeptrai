@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping({"/blog",""})
+@RequestMapping({"","/blog"})
 public class BlogController {
 
     @Autowired
-    BlogService blogService;
+   private BlogService blogService;
 
     @Autowired
-    CategoryService categoryService;
+   private CategoryService categoryService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String list(Model model, @PageableDefault(size = 3) Pageable pageable){
+    public String list(Model model, @PageableDefault(size = 3) Pageable  pageable){
 //        model.addAttribute("list",blogService.findAll());
         model.addAttribute("list",blogService.findAll(pageable));
         return "list";

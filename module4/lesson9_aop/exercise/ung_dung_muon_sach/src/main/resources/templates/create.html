@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Book</title>
+</head>
+<body>
+<header th:replace="common::headerBook"></header>
+<form action="/book/create" method="post" th:object="${book}">
+    <p>Book Name:</p>
+    <input type="text" th:field="*{book_name}"/>
+    <p style="color: red" th:if="${#fields.hasErrors('book_name')}" th:errors="*{book_name}"></p>
+    <!--        <input type="text" th:field="${student.name}"/>-->
+    <p>Book Numbers:</p>
+    <input type="text" th:field="*{book_numbers}" />
+    <p style="color: red" th:if="${#fields.hasErrors('book_numbers')}" th:errors="*{book_numbers}"></p>
+    <!--        <input type="date" th:field="${student.dateOfBirth}"/>-->
+
+    <br>
+    <input type="submit" value="Save" />
+
+</form>
+<footer th:replace="common::footerBook"></footer>
+</body>
+</html>

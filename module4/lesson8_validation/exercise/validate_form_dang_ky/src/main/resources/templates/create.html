@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create student</title>
+</head>
+<body>
+<header th:replace="common::headerUser"></header>
+<form action="/user/create" method="post" th:object="${user}">
+    <p>First Name:</p>
+    <input type="text" th:field="*{firstName}"/>
+    <p style="color: red" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></p>
+    <!--        <input type="text" th:field="${student.name}"/>-->
+    <p>Last Name:</p>
+    <input type="text" th:field="*{lastName}"/>
+    <p style="color: red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
+    <!--        <input type="text" th:field="${student.name}"/>-->
+    <p>Age :</p>
+    <input type="text" th:field="*{age}" />
+    <p style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></p>
+    <p>Phone Number :</p>
+    <input type="text" th:field="*{phoneNumber}" />
+    <p style="color: red" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></p>
+
+    <p>Email :</p>
+    <input type="text" th:field="*{email}" />
+    <p style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+
+    <br/>
+    <br/>
+    <input type="submit" value="Save" />
+
+</form>
+<footer th:replace="common::footerUser"></footer>
+</body>
+</html>

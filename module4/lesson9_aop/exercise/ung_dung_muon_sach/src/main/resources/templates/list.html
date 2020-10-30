@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List Customer</title>
+</head>
+<body>
+<header th:replace="~{common::headerBook}"></header>
+<form action="/customer">
+    <input type="text" name="keyword" th:value="${keywordOld}" />
+    <input type="submit" value="Search" />
+</form>
+<p style="color: green" th:text="${message}"></p>
+<table border="1">
+    <tr>
+        <th>STT</th>
+        <th>Book Name</th>
+        <th>Book Numbers</th>
+        <th>Book Borrow</th>
+        <th>Book Pay</th>
+    </tr>
+    <th:block th:each="book : ${list}">
+        <tr>
+            <td th:text="${book.id}"></td>
+            <td th:text="${book.book_name}"></td>
+            <td th:text="${book.book_numbers}"></td>
+
+            <td><a th:href="@{/book/borrow(id=${book.id})}">Borrow</a></td>
+            <td><a th:href="@{/book/pay(id=${book.id})}">Pay</a></td>
+        </tr>
+    </th:block>
+</table>
+<a th:if="${list.hasPrevious()}" th:href="@{/book(page = ${list.number - 1})}">Previous</a>
+<span th:text="${list.number + 1}"></span>/<span th:text="${list.totalPages}"></span>
+<a th:if="${list.hasNext()}" th:href="@{/book(page = ${list.number + 1})}">Next</a>
+<!--<th:block th:each="i: ${#numbers.sequence(0, list.totalPages - 1)}">-->
+<!--    <a th:href="@{/customer(page = ${i})}" th:text="${i + 1}"></a>-->
+<!--</th:block>-->
+<!--    <footer th:insert="common::footerStudent"></footer>-->
+<!--    <th:block th:insert="common::footerStudent"></th:block>-->
+<footer th:replace="common::footerBook"></footer>
+</body>
+</html>
