@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class CurrencyConversion {
     @GetMapping("/")
-    private String webHome(){
+    private String webHome() {
 
         return "currency_conversion";
     }
 
     @GetMapping("/result")
-    public  String result(@RequestParam String usaMoney, @RequestParam String vndMoney, Model model) {
-        double result = Double.parseDouble(usaMoney)*22000;
-        model.addAttribute("result",result);
+    public String result(@RequestParam String usaMoney, @RequestParam String vndMoney, Model model) {
+        double result = Double.parseDouble(usaMoney) * 22000;
+        model.addAttribute("result", result);
         return "display";
     }
 

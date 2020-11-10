@@ -58,7 +58,7 @@ public class StudentController {
     @GetMapping("/detail/{idStudent}")
     public String goDetailStudentPathVariable(@PathVariable(value = "idStudent") Integer id,
                                               Model model) throws Exception {
-            model.addAttribute("studentDetail", studentService.findById(id));
+        model.addAttribute("studentDetail", studentService.findById(id));
         return "detail_student";
     }
 

@@ -7,7 +7,7 @@
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <html>
 <head>
@@ -40,12 +40,12 @@
 
     </tr>
 
-        <tr>
-            <td>${mail.language}</td>
-            <td>${mail.size}</td>
-            <td>${mail.spamFilter}</td>
-            <td>${mail.signature}</td>
-        </tr>
+    <tr>
+        <td>${mail.language}</td>
+        <td>${mail.size}</td>
+        <td>${mail.spamFilter}</td>
+        <td>${mail.signature}</td>
+    </tr>
 
 </table>
 

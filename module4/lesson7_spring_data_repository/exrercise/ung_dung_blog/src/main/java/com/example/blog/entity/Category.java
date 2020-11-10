@@ -3,14 +3,14 @@ package com.example.blog.entity;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity(name= "category")
+@Entity(name = "category")
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idCategory;
-    private  String nameCategory;
+    private String nameCategory;
 
-    @OneToMany(mappedBy = "category",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<BlogClass> blogClassList;
 
     public Category() {

@@ -10,10 +10,10 @@
 <form action="/customer/update" method="post" th:object="${customer}">
     <input type="hidden" th:field="*{id}">
     <label for="name"> Name: </label>
-    <input id="name" th:field="*{name}" />
+    <input id="name" th:field="*{name}"/>
     <br/>
     <label for="address"> Address: </label>
-    <input id="address" th:field="*{address}" /><br/>
+    <input id="address" th:field="*{address}"/><br/>
     <input type="submit" value="Update"/>
 </form>
 <footer th:replace="~{common::footerCustomer}"></footer>

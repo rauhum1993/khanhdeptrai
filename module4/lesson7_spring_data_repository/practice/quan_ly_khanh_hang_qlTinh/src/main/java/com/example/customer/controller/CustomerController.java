@@ -17,7 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.Optional;
 
 @Controller
-@RequestMapping({"/customer",""})
+@RequestMapping({"/customer", ""})
 public class CustomerController {
 
     @Autowired
@@ -27,53 +27,56 @@ public class CustomerController {
     private TypeCustomerService typeCustomerService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String list(Model model, @PageableDefault(size = 3)  Pageable pageable,@RequestParam Optional<String> keyword){
+    public String list(Model model, @PageableDefault(size = 3) Pageable pageable, @RequestParam Optional<String> keyword) {
 
-        String keyWordOld ="" ;
-        if(keyword.isPresent()){
-            keyWordOld =keyword.get();
-            model.addAttribute("list",cutomerService.findByNameContaining(pageable,keyWordOld));
+        String keyWordOld = "";
+        if (keyword.isPresent()) {
+            keyWordOld = keyword.get();
+            model.addAttribute("list", cutomerService.findByNameContaining(pageable, keyWordOld));
         } else {
-            model.addAttribute("list",cutomerService.findAll(pageable));
+            model.addAttribute("list", cutomerService.findAll(pageable));
         }
         model.addAttribute("keywordOld", keyWordOld);
         return "list";
     }
 
 
-
     @GetMapping("/create")
-    public String formcreate(Model model){
-        model.addAttribute("customer",new Customer());
-        model.addAttribute("listTypeCustomer",typeCustomerService.findAll());
+    public String formcreate(Model model) {
+        model.addAttribute("customer", new Customer());
+        model.addAttribute("listTypeCustomer", typeCustomerService.findAll());
         return "create";
     }
 
     @PostMapping("/create")
-    public String create(@ModelAttribute Customer customer, Model model, RedirectAttributes redirectAttributes){
+    public String create(@ModelAttribute Customer customer, Model model, RedirectAttributes redirectAttributes) {
 
         cutomerService.save(customer);
-        redirectAttributes.addFlashAttribute("message","Create success");
+        redirectAttributes.addFlashAttribute("message", "Create success");
         return "redirect:/";
     }
+
     @GetMapping("/update")
-    public String formupdate(@RequestParam Integer id,Model model){
-        model.addAttribute("customer",cutomerService.fillById(id));
-        model.addAttribute("listTypeCustomer",typeCustomerService.findAll());
+    public String formupdate(@RequestParam Integer id, Model model) {
+        model.addAttribute("customer", cutomerService.fillById(id));
+        model.addAttribute("listTypeCustomer", typeCustomerService.findAll());
         return "update";
     }
+
     @PostMapping("/update")
-    public String update(@ModelAttribute Customer customer){
+    public String update(@ModelAttribute Customer customer) {
         cutomerService.save(customer);
         return "redirect:/";
     }
+
     @GetMapping("/delete")
-    public String formDelete(@RequestParam Integer id,Model model){
-        model.addAttribute("customer",cutomerService.fillById(id));
+    public String formDelete(@RequestParam Integer id, Model model) {
+        model.addAttribute("customer", cutomerService.fillById(id));
         return "delete";
     }
+
     @PostMapping("/delete")
-    public String delete(@RequestParam Integer id){
+    public String delete(@RequestParam Integer id) {
         cutomerService.delete(id);
         return "redirect:/";
     }

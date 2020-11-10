@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;
 
-@Entity (name = "class")
+@Entity(name = "class")
 public class ClassStudent {
 
     @Id

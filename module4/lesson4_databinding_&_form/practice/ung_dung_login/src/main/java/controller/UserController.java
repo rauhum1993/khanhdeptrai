@@ -12,16 +12,16 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class UserController {
 
-    @GetMapping({"","/home"})
-    public ModelAndView home(){
+    @GetMapping({"", "/home"})
+    public ModelAndView home() {
         ModelAndView modelAndView = new ModelAndView("home", "login", new Login());
         return modelAndView;
     }
 
     @PostMapping("/login")
-    public ModelAndView login(@ModelAttribute("login") Login login){
+    public ModelAndView login(@ModelAttribute("login") Login login) {
         User user = UserDao.checkLogin(login);
-        if(user == null){
+        if (user == null) {
             ModelAndView modelAndView = new ModelAndView("error");
             return modelAndView;
         } else {

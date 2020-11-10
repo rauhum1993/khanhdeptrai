@@ -3,13 +3,13 @@ package com.example.blog.entity;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity(name= "blog")
+@Entity(name = "blog")
 public class BlogClass {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String postName;
-    private  String content_blog;
+    private String content_blog;
     private String dateCreate;
 
     @ManyToOne

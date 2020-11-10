@@ -15,12 +15,12 @@ public class MailImpl implements MailService {
 
     static {
 
-       mail= new Mail("Lao", "5", "false", "hai");
+        mail = new Mail("Lao", "5", "false", "hai");
     }
 
     @Override
     public void save(Mail mail1) {
-        mail.setLanguage(mail1.getLanguage()) ;
+        mail.setLanguage(mail1.getLanguage());
         mail.setSize(mail1.getSize());
         mail.setSpamFilter(mail1.getSpamFilter());
         mail.setSignature(mail1.getSignature());

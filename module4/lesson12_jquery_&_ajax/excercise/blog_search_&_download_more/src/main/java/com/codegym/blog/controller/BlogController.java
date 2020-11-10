@@ -12,29 +12,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping({"/blog",""})
+@RequestMapping({"/blog", ""})
 public class BlogController {
 
     @Autowired
     BlogService blogService;
 
     @GetMapping
-    public String list(Model model){
-        model.addAttribute("list",blogService.findAll());
+    public String list(Model model) {
+        model.addAttribute("list", blogService.findAll());
         return "list";
     }
 
     @GetMapping("/create")
-    public String formCreate(Model model){
+    public String formCreate(Model model) {
         model.addAttribute("blog", new Blog());
 
-        return  "create";
+        return "create";
     }
 
     @PostMapping("/create")
-    public String create(@ModelAttribute Blog blog, Model model, RedirectAttributes redirectAttributes){
+    public String create(@ModelAttribute Blog blog, Model model, RedirectAttributes redirectAttributes) {
         blogService.save(blog);
-        redirectAttributes.addAttribute("message","create success");
+        redirectAttributes.addAttribute("message", "create success");
         return "redirect:/";
     }
 

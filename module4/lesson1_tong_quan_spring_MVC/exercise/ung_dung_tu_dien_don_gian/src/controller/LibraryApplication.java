@@ -20,7 +20,7 @@ public class LibraryApplication {
     }
 
     @GetMapping("/result")
-    private String result(@RequestParam String search, Model model){
+    private String result(@RequestParam String search, Model model) {
         customer.add("Dat");
         customer.add("hai");
         customer.add("Nhat");

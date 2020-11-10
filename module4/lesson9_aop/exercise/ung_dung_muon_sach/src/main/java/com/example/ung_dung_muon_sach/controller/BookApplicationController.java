@@ -14,28 +14,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping({"/book",""})
+@RequestMapping({"/book", ""})
 public class BookApplicationController {
 
     @Autowired
     BookService bookService;
 
     @GetMapping
-    public String list(Model model, @PageableDefault(size = 2) Pageable pageable){
+    public String list(Model model, @PageableDefault(size = 2) Pageable pageable) {
 
-        model.addAttribute("list",bookService.findAll(pageable));
+        model.addAttribute("list", bookService.findAll(pageable));
         return "list";
     }
 
     @GetMapping("/create")
-    public  String formCreate(Model model){
-        model.addAttribute("book",new BookApplication());
+    public String formCreate(Model model) {
+        model.addAttribute("book", new BookApplication());
         return "create";
     }
+
     @PostMapping("/create")
-    public  String create(@ModelAttribute BookApplication book, Model model, RedirectAttributes redirectAttributes){
+    public String create(@ModelAttribute BookApplication book, Model model, RedirectAttributes redirectAttributes) {
         bookService.save(book);
-        redirectAttributes.addFlashAttribute("message","create a book success");
+        redirectAttributes.addFlashAttribute("message", "create a book success");
         return "redirect:/";
     }
 }

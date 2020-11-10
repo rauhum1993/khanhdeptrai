@@ -17,17 +17,19 @@ public class MailboxController {
     private MailService mailService;
 
     @GetMapping("/update")
-    private String settingMail( Model model){
+    private String settingMail(Model model) {
         model.addAttribute("mail", mailService.display());
         return "form_edit";
     }
-    @GetMapping({"/","/mail"})
-    private String infoMail(Model model){
+
+    @GetMapping({"/", "/mail"})
+    private String infoMail(Model model) {
         model.addAttribute("mail", mailService.display());
         return "info";
     }
+
     @PostMapping("/update")
-    private String updateMail(@ModelAttribute Mail mail){
+    private String updateMail(@ModelAttribute Mail mail) {
         this.mailService.save(mail);
         return "redirect:/mail";
     }

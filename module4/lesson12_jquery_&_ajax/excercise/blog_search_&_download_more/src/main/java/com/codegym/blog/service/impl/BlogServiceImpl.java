@@ -13,6 +13,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Autowired
     BlogRepository blogRepository;
+
     @Override
     public List<Blog> findAll() {
         return blogRepository.findAll();

@@ -15,8 +15,8 @@ public class LoginController {
 
     @GetMapping(value = "/login")
     public String goLogin(Model model,
-                          @CookieValue (value = "usernameC", defaultValue = "") String username,
-                          @CookieValue (value = "passwordC", defaultValue = "") String password) {
+                          @CookieValue(value = "usernameC", defaultValue = "") String username,
+                          @CookieValue(value = "passwordC", defaultValue = "") String password) {
         model.addAttribute("userLogin", new User(username, password));
         return "login";
     }

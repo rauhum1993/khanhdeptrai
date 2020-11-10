@@ -18,16 +18,16 @@ public class User implements Validator {
     private Integer id;
 
     @NotBlank(message = "Không được để trống ")
-    @Size(min = 5,max = 45,message = "Số ký tự tối thiểu là 5 và tối đa là 45")
+    @Size(min = 5, max = 45, message = "Số ký tự tối thiểu là 5 và tối đa là 45")
     private String firstName;
 
     @NotBlank(message = "Không được để trống ")
-    @Size(min = 5,max = 45,message = "Số ký tự tối thiểu là 5 và tối đa là 45")
+    @Size(min = 5, max = 45, message = "Số ký tự tối thiểu là 5 và tối đa là 45")
     private String lastName;
-    @Pattern(regexp = "(^0\\d{9}$)",message = "Ghi đúng định dạng số điện thoại")
+    @Pattern(regexp = "(^0\\d{9}$)", message = "Ghi đúng định dạng số điện thoại")
     private String phoneNumber;
 
-    @Min(value = 18,message = "Tối thiếu 18 tuổi")
+    @Min(value = 18, message = "Tối thiếu 18 tuổi")
     private int age;
 
     @Email(message = "Ghi đúng định dạng email codegym@gmail.com")
@@ -92,7 +92,7 @@ public class User implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-        User user =(User) target;
+        User user = (User) target;
 
         if (("").equals(user.firstName)) {
             errors.rejectValue("firstName", "name.empty");

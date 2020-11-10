@@ -10,12 +10,12 @@
     <p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
     <!--        <input type="text" th:field="${student.name}"/>-->
     <p>Address:</p>
-    <input type="text" th:field="*{address}" />
+    <input type="text" th:field="*{address}"/>
     <p style="color: red" th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></p>
     <!--        <input type="date" th:field="${student.dateOfBirth}"/>-->
 
     <br>
-    <input type="submit" value="Save" />
+    <input type="submit" value="Save"/>
 
 </form>
 <footer th:replace="common::footerCustomer"></footer>

@@ -25,8 +25,8 @@ public class CalculatorController {
             model.addAttribute("result", (Integer.parseInt(number1) - Integer.parseInt(number2)));
         } else if (result == "multiplication") {
             model.addAttribute("result", (Integer.parseInt(number1) * Integer.parseInt(number2)));
-        } else  if (result == "division") {
-            model.addAttribute("result", (Integer.parseInt(number1) /Integer.parseInt(number2)));
+        } else if (result == "division") {
+            model.addAttribute("result", (Integer.parseInt(number1) / Integer.parseInt(number2)));
         }
 
         return "home";

@@ -13,6 +13,7 @@ public interface CutomerService {
     void save(Customer customer);
 
     Page<Customer> findAll(Pageable pageable);
+
     Customer fillById(Integer id);
 
     Page<Customer> findByNameContaining(Pageable pageable, String name);

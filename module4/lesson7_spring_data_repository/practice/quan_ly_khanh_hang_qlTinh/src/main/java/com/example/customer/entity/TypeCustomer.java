@@ -10,7 +10,7 @@ public class TypeCustomer {
     private Integer type_id;
     private String type_name;
 
-    @OneToMany(mappedBy = "typeCustomer",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "typeCustomer", cascade = CascadeType.ALL)
     private List<Customer> customerList;
 
     public TypeCustomer() {

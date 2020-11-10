@@ -11,12 +11,13 @@ import org.springframework.web.servlet.ModelAndView;
 public class UserController {
 
     @GetMapping("/")
-    public String home(){
+    public String home() {
         return "index";
     }
+
     @GetMapping("/list")
-    public  String displayList(Model model, @RequestParam String sandwich){
-        model.addAttribute("sandwich",sandwich);
+    public String displayList(Model model, @RequestParam String sandwich) {
+        model.addAttribute("sandwich", sandwich);
         return "display";
     }
 }

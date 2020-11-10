@@ -3,21 +3,21 @@
     <title>Create student</title>
 </head>
 <body>
-    <header th:replace="common::headerProduct"></header>
-    <form action="/product/create" method="post" th:object="${product}">
-        <p>Name:</p>
-        <input type="text" th:field="*{name}"/>
-<!--        <input type="text" th:field="${student.name}"/>-->
-        <p>Where Production:</p>
-        <input type="text" th:field="*{whereProduction}" />
-        <p>Color :</p>
-        <input type="text" th:field="*{color}" />
-        <p>Price :</p>
-        <input type="text" th:field="*{price}" />
-<!--        <input type="date" th:field="${student.dateOfBirth}"/>-->
-        <br>
-        <input type="submit" value="Save" />
-    </form>
-    <footer th:replace="common::footerProduct"></footer>
+<header th:replace="common::headerProduct"></header>
+<form action="/product/create" method="post" th:object="${product}">
+    <p>Name:</p>
+    <input type="text" th:field="*{name}"/>
+    <!--        <input type="text" th:field="${student.name}"/>-->
+    <p>Where Production:</p>
+    <input type="text" th:field="*{whereProduction}"/>
+    <p>Color :</p>
+    <input type="text" th:field="*{color}"/>
+    <p>Price :</p>
+    <input type="text" th:field="*{price}"/>
+    <!--        <input type="date" th:field="${student.dateOfBirth}"/>-->
+    <br>
+    <input type="submit" value="Save"/>
+</form>
+<footer th:replace="common::footerProduct"></footer>
 </body>
 </html>

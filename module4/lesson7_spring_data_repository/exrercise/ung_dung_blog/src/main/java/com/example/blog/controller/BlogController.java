@@ -12,31 +12,33 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping({"","/blog"})
+@RequestMapping({"", "/blog"})
 public class BlogController {
 
     @Autowired
-   private BlogService blogService;
+    private BlogService blogService;
 
     @Autowired
-   private CategoryService categoryService;
+    private CategoryService categoryService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String list(Model model, @PageableDefault(size = 3) Pageable  pageable){
+    public String list(Model model, @PageableDefault(size = 3) Pageable pageable) {
 //        model.addAttribute("list",blogService.findAll());
-        model.addAttribute("list",blogService.findAll(pageable));
+        model.addAttribute("list", blogService.findAll(pageable));
         return "list";
     }
+
     @GetMapping("/create")
-    public String formCreate(Model model){
+    public String formCreate(Model model) {
         model.addAttribute("blog", new BlogClass());
-        model.addAttribute("listCategory",categoryService.findAll());
+        model.addAttribute("listCategory", categoryService.findAll());
         return "create";
     }
+
     @PostMapping("/create")
-    public  String create(@ModelAttribute BlogClass blogClass, RedirectAttributes redirectAttributes){
+    public String create(@ModelAttribute BlogClass blogClass, RedirectAttributes redirectAttributes) {
         blogService.save(blogClass);
-        redirectAttributes.addFlashAttribute("message","create success");
+        redirectAttributes.addFlashAttribute("message", "create success");
         return "redirect:/";
     }
 }

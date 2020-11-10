@@ -13,28 +13,28 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping({"","/user"})
+@RequestMapping({"", "/user"})
 public class UserController {
 
     @Autowired
     UserService userService;
 
-   @RequestMapping(method = RequestMethod.GET)
-    public String list(@PageableDefault(size = 3) Pageable pageable, Model model){
-        model.addAttribute("list",userService.findAll(pageable));
+    @RequestMapping(method = RequestMethod.GET)
+    public String list(@PageableDefault(size = 3) Pageable pageable, Model model) {
+        model.addAttribute("list", userService.findAll(pageable));
         return "list";
     }
 
     @GetMapping("/create")
-    public String formCreate(Model model){
-       model.addAttribute("user",new User());
-       return "create";
+    public String formCreate(Model model) {
+        model.addAttribute("user", new User());
+        return "create";
     }
 
     @PostMapping("/create")
-    public  String create(@Validated @ModelAttribute User user, BindingResult bindingResult,
-                          RedirectAttributes redirectAttributes,Model model,@PageableDefault(size = 3) Pageable pageable){
-       new User().validate(user,bindingResult);
+    public String create(@Validated @ModelAttribute User user, BindingResult bindingResult,
+                         RedirectAttributes redirectAttributes, Model model, @PageableDefault(size = 3) Pageable pageable) {
+        new User().validate(user, bindingResult);
         if (bindingResult.hasFieldErrors()) {
             model.addAttribute("listClassStudent", this.userService.findAll(pageable));
             return "create";
@@ -42,7 +42,7 @@ public class UserController {
 
         this.userService.save(user);
         redirectAttributes.addFlashAttribute("message", "Create user success");
-       return "redirect:/";
+        return "redirect:/";
     }
 
 

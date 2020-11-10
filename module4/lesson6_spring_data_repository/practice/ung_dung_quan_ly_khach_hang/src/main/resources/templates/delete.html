@@ -7,7 +7,7 @@
 <body>
 <header th:replace="common::headerCustomer"></header>
 <p>Id: <span th:text="${customer.id}"></span></p>
-<p>Name: <span th:text="${customer.name}"></span> </p>
+<p>Name: <span th:text="${customer.name}"></span></p>
 <p>Date of birth: <span th:text="${customer.address}"></span></p>
 <form method="post" action="/customer/delete" th:object="${customer}">
     <input type="hidden" th:field="*{id}">

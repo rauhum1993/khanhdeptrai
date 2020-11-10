@@ -3,17 +3,17 @@
     <title>Create student</title>
 </head>
 <body>
-    <header th:replace="common::headerStudent"></header>
-    <form action="/student/create" method="post" th:object="${student}">
-        <p>Name:</p>
-        <input type="text" th:field="*{name}"/>
-<!--        <input type="text" th:field="${student.name}"/>-->
-        <p>Date of birth:</p>
-        <input type="date" th:field="*{dateOfBirth}" />
-<!--        <input type="date" th:field="${student.dateOfBirth}"/>-->
-        <br>
-        <input type="submit" value="Save" />
-    </form>
-    <footer th:replace="common::footerStudent"></footer>
+<header th:replace="common::headerStudent"></header>
+<form action="/student/create" method="post" th:object="${student}">
+    <p>Name:</p>
+    <input type="text" th:field="*{name}"/>
+    <!--        <input type="text" th:field="${student.name}"/>-->
+    <p>Date of birth:</p>
+    <input type="date" th:field="*{dateOfBirth}"/>
+    <!--        <input type="date" th:field="${student.dateOfBirth}"/>-->
+    <br>
+    <input type="submit" value="Save"/>
+</form>
+<footer th:replace="common::footerStudent"></footer>
 </body>
 </html>

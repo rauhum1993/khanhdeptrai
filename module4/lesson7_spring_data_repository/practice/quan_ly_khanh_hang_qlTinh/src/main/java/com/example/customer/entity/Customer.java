@@ -11,7 +11,7 @@ public class Customer {
     private String address;
 
     @ManyToOne
-    @JoinColumn(name = "type_id" )
+    @JoinColumn(name = "type_id")
     private TypeCustomer typeCustomer;
 
     public Customer() {

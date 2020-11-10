@@ -14,7 +14,7 @@ public class Student implements Validator {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-//    @NotBlank(message = "Vui long nhap name")
+    //    @NotBlank(message = "Vui long nhap name")
 //    @Pattern(regexp="^[A-Za-z]*$", message = "Vui long nhap chu")
 //    @Email
     private String name;

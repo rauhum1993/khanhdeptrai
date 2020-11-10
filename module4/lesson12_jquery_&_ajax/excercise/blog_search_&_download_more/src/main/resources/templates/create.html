@@ -12,16 +12,16 @@
     <p style="color: red" th:if="${#fields.hasErrors('name_blog')}" th:errors="*{name_blog}"></p>
     <!--        <input type="text" th:field="${student.name}"/>-->
     <p>Content:</p>
-    <input type="text" th:field="*{content}" />
+    <input type="text" th:field="*{content}"/>
     <!--        <input type="date" th:field="${student.dateOfBirth}"/>-->
     <p>Date Create:</p>
-    <input type="date" th:field="*{date_create}" />
-<!--    <select th:field="*{classStudent}">-->
-<!--        <option th:each="classStudent : ${listClassStudent}"-->
-<!--                th:value="${classStudent.id}" th:text="${classStudent.name}"></option>-->
-<!--    </select>-->
+    <input type="date" th:field="*{date_create}"/>
+    <!--    <select th:field="*{classStudent}">-->
+    <!--        <option th:each="classStudent : ${listClassStudent}"-->
+    <!--                th:value="${classStudent.id}" th:text="${classStudent.name}"></option>-->
+    <!--    </select>-->
     <br>
-    <input type="submit" value="Save" />
+    <input type="submit" value="Save"/>
 
 </form>
 <footer th:replace="common::footerBlog"></footer>

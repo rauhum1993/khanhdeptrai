@@ -8,7 +8,7 @@
 <h1>Sandwich Condiments</h1>
 
 
-<form action="/list" >
+<form action="/list">
     <input type="checkbox" id="lettuce" name="sandwich" value="Lettuce">
     <label for="lettuce"> Lettuce</label>
     <input type="checkbox" id="tomato" name="sandwich" value="Tomato">
@@ -17,7 +17,9 @@
     <label for="mustard"> Mustard</label>
     <input type="checkbox" id="sprouts" name="sandwich" value="Sprouts">
     <label for="sprouts"> Sprouts</label>
-    <br><hr><br>
+    <br>
+    <hr>
+    <br>
     <input type="submit" value="Save">
 </form>
 

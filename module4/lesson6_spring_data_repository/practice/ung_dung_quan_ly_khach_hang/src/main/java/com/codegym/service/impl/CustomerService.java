@@ -9,7 +9,7 @@ public interface CustomerService {
 
     Customer fillById(Integer id);
 
-    void  save(Customer customer);
+    void save(Customer customer);
 
-   void delete(Integer id);
+    void delete(Integer id);
 }

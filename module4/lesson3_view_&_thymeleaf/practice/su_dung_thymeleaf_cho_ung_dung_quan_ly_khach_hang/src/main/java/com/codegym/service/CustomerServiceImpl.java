@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class CustomerServiceImpl  implements CustomerService{
+public class CustomerServiceImpl implements CustomerService {
     private static Map<Integer, Customer> customers;
 
     static {

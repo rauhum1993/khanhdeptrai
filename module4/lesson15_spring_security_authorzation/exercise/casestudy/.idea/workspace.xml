@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="913e4f9a-9da8-440f-8693-28be09b44269" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/config/LogStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/entity/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/entity/RoleUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/repository/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/repository/RoleUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/java/com/codegym/security/service/impl/UserDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/resources/message/content_web_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/resources/message/content_web_vn.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/resources/message/error_message.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/resources/templates/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/resources/templates/common.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/resources/templates/list_product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ap_dung_security_trong_thuc_the_co_CSDL/src/main/resources/templates/login.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1jqnBvRXyl0SdYUqB9vjZpcTVts" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="913e4f9a-9da8-440f-8693-28be09b44269" name="Default Changelist" comment="" />
+      <created>1604540357622</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604540357622</updated>
+      <workItem from="1604540360583" duration="39000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

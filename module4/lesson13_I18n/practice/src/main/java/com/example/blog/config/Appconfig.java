@@ -21,6 +21,7 @@ public class Appconfig implements WebMvcConfigurer {
         messageSource.setBasename("message/message");
         return messageSource;
     }
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();

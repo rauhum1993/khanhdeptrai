@@ -9,7 +9,7 @@ import java.util.List;
 public interface BlogService {
     List<BlogClass> findAll();
 
-    void  save(BlogClass blogClass);
+    void save(BlogClass blogClass);
 
     Page<BlogClass> findAll(Pageable pageable);
 

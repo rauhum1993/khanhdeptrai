@@ -13,7 +13,7 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 
     Page<Student> findAllByNameContaining(Pageable pageable, String name);
 
-//    @Query(value = "select * from student where `name` like %?1%", nativeQuery = true)
+    //    @Query(value = "select * from student where `name` like %?1%", nativeQuery = true)
     @Query(value = "select * from student where `name` like concat('%', ?1, '%')", nativeQuery = true)
     List<Student> searchStudentByName(String name);
 }

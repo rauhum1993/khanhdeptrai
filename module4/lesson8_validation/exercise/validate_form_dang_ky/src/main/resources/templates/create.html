@@ -14,19 +14,19 @@
     <p style="color: red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
     <!--        <input type="text" th:field="${student.name}"/>-->
     <p>Age :</p>
-    <input type="text" th:field="*{age}" />
+    <input type="text" th:field="*{age}"/>
     <p style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></p>
     <p>Phone Number :</p>
-    <input type="text" th:field="*{phoneNumber}" />
+    <input type="text" th:field="*{phoneNumber}"/>
     <p style="color: red" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></p>
 
     <p>Email :</p>
-    <input type="text" th:field="*{email}" />
+    <input type="text" th:field="*{email}"/>
     <p style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
 
     <br/>
     <br/>
-    <input type="submit" value="Save" />
+    <input type="submit" value="Save"/>
 
 </form>
 <footer th:replace="common::footerUser"></footer>

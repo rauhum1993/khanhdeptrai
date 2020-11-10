@@ -9,7 +9,7 @@ public interface ProductService {
 
     Product fillByID(String id);
 
-    void  save(Product product);
+    void save(Product product);
 
     void update(Product product);
 

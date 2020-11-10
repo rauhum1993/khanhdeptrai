@@ -9,10 +9,10 @@
 <header th:replace="~{common::headerCustomer}"></header>
 <form action="/customer/create" method="post" th:object="${customer}">
     <label for="name"> Name: </label>
-    <input id="name" th:field="*{name}" />
+    <input id="name" th:field="*{name}"/>
     <br/>
     <label for="address"> Address: </label>
-    <input id="address" th:field="*{address}" /><br/>
+    <input id="address" th:field="*{address}"/><br/>
     <input type="submit" value="Save"/>
 </form>
 <footer th:replace="~{common::footerCustomer}"></footer>

@@ -8,7 +8,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 public class User {
-   @NotEmpty
+    @NotEmpty
     @Size(min = 2, max = 30)
     private String name;
 

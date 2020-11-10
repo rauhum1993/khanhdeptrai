@@ -14,46 +14,52 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/")
-    public String display(Model model){
-        model.addAttribute("productList",productService.fillAll());
+    public String display(Model model) {
+        model.addAttribute("productList", productService.fillAll());
         return "home";
     }
+
     @GetMapping("/product/create")
-    public String formCreate(Model model){
-        model.addAttribute("product",new Product());
+    public String formCreate(Model model) {
+        model.addAttribute("product", new Product());
         return "create";
     }
+
     @PostMapping("/product/create")
-    public String save(@ModelAttribute Product product,Model model){
+    public String save(@ModelAttribute Product product, Model model) {
         productService.save(product);
-        model.addAttribute("productList",productService.fillAll());
+        model.addAttribute("productList", productService.fillAll());
         return "redirect:/";
     }
+
     @GetMapping("/product/edit/{id}")
-    public String formEdit(Model model, @PathVariable String id){
-        model.addAttribute("product",productService.fillByID(id));
+    public String formEdit(Model model, @PathVariable String id) {
+        model.addAttribute("product", productService.fillByID(id));
         return "edit";
     }
 
     @PostMapping("/product/edit")
-    public String update(Model model,@ModelAttribute Product product){
+    public String update(Model model, @ModelAttribute Product product) {
         productService.update(product);
-        model.addAttribute("productList",productService.fillAll());
+        model.addAttribute("productList", productService.fillAll());
         return "redirect:/";
     }
+
     @GetMapping("/product/delete/{id}")
-    public String formDelete(Model model,@PathVariable String id){
-        model.addAttribute("product",productService.fillByID(id));
+    public String formDelete(Model model, @PathVariable String id) {
+        model.addAttribute("product", productService.fillByID(id));
         return "delete";
     }
+
     @PostMapping("/product/delete")
-    public String delete(Model model,@ModelAttribute Product product){
+    public String delete(Model model, @ModelAttribute Product product) {
         productService.delete(product);
         return "redirect:/";
     }
+
     @GetMapping("/product/view/{id}")
-    public String view(Model model,@PathVariable String id){
-        model.addAttribute("product",productService.fillByID(id));
+    public String view(Model model, @PathVariable String id) {
+        model.addAttribute("product", productService.fillByID(id));
         return "view";
     }
 

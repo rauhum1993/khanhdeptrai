@@ -9,14 +9,14 @@
 <header th:replace="~{common::headerBlog}"></header>
 <form action="/blog/create" method="post" th:object="${blog}">
     <label for="postName"> Post Name: </label>
-    <input id="postName" th:field="*{postName}" />
+    <input id="postName" th:field="*{postName}"/>
     <br/>
     <br/>
     <label for="content_blog"> Content Blog: </label>
-    <input id="content_blog" th:field="*{content_blog}" /><br/>
+    <input id="content_blog" th:field="*{content_blog}"/><br/>
     <br/>
     <label for="dateCreate"> Date Create: </label>
-    <input type="date" id="dateCreate" th:field="*{dateCreate}" /><br/>
+    <input type="date" id="dateCreate" th:field="*{dateCreate}"/><br/>
     <br/>
 
     <label for="category"> Category : </label>

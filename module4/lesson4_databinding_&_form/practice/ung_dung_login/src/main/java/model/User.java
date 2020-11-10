@@ -14,9 +14,11 @@ public class User {
         this.email = email;
         this.age = age;
     }
-    public User(){
+
+    public User() {
 
     }
+
     public String getAccount() {
         return account;
     }

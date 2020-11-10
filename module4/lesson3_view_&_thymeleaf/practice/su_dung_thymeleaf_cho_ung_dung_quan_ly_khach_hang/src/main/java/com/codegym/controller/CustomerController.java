@@ -17,7 +17,7 @@ import java.util.List;
 @Controller
 public class CustomerController {
     @Autowired
-    private CustomerService customerService ;
+    private CustomerService customerService;
 
     @GetMapping("/")
     public String index(Model model) {
@@ -31,9 +31,10 @@ public class CustomerController {
         model.addAttribute("customer", new Customer());
         return "create";
     }
+
     @PostMapping("/customer/save")
     public String save(Customer customer, RedirectAttributes redirect) {
-        customer.setId((int)(Math.random() * 10000));
+        customer.setId((int) (Math.random() * 10000));
         customerService.save(customer);
         redirect.addFlashAttribute("success", "Saved customer successfully!");
         return "redirect:/";

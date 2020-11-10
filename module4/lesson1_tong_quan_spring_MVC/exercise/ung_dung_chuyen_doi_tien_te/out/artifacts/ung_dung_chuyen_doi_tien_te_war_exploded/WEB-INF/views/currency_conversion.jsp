@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -7,7 +6,7 @@
 <body>
 <form action="/result">
     <h2>Currency conversion</h2>
-    <p> USA($):  </p>
+    <p> USA($): </p>
     <input type="text" name="usaMoney">
     <p>VND: </p>
     <input type="text" name="vndMoney" placeholder="22000">

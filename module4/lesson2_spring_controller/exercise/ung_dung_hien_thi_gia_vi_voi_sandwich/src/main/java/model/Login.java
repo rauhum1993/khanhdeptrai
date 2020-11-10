@@ -24,7 +24,8 @@ public class Login {
         this.account = account;
         this.password = password;
     }
-    public Login(){
+
+    public Login() {
 
     }
 

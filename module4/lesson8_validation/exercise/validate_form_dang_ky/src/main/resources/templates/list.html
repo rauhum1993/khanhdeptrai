@@ -5,8 +5,8 @@
 <body>
 <header th:replace="~{common::headerUser}"></header>
 <form action="/user">
-    <input type="text" name="keyword" th:value="${keywordOld}" />
-    <input type="submit" value="Search" />
+    <input type="text" name="keyword" th:value="${keywordOld}"/>
+    <input type="submit" value="Search"/>
 </form>
 <br/>
 <p style="color: green" th:text="${message}"></p>

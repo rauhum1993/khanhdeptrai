@@ -20,10 +20,10 @@
     </bean>
 
     <bean id="engine" class="org.thymeleaf.spring4.SpringTemplateEngine">
-        <property name="templateResolver" ref="viewResolver" />
+        <property name="templateResolver" ref="viewResolver"/>
     </bean>
 
     <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
-        <property name="templateEngine" ref="engine" />
+        <property name="templateEngine" ref="engine"/>
     </bean>
 </beans>

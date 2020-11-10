@@ -49,8 +49,8 @@
 <form:form action="/update" method="post" modelAttribute="mail">
     <p>language:</p>
     <form:select path="language">
-      <form:option value="English">English</form:option>
-      <form:option value="Vietnamese">Vietnamese</form:option>
+        <form:option value="English">English</form:option>
+        <form:option value="Vietnamese">Vietnamese</form:option>
     </form:select>
     <p>size:</p>
     <form:select path="size">
@@ -63,9 +63,9 @@
         <form:option value="100">100</form:option>
     </form:select>
     <p>spamFilter:</p>
-        <form:checkbox path="spamFilter" value="true" />
+    <form:checkbox path="spamFilter" value="true"/>
     <p>signature:</p>
-        <form:textarea path="signature" rows="5" cols="50"/>
+    <form:textarea path="signature" rows="5" cols="50"/>
     <br>
     <input type="submit" value="edit"/>
 </form:form>

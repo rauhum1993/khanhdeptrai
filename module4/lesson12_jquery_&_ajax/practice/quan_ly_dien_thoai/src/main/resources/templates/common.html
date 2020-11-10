@@ -5,14 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-    <header th:fragment="headerStudent">
-        <h2>Welcome, <span th:text="${userLogin.username}"></span></h2>
-        <a href="/student/create">Create student</a>
-        <hr>
-    </header>
-    <footer th:fragment="footerStudent">
-        <hr>
-        @Codegym
-    </footer>
+<header th:fragment="headerStudent">
+    <h2>Welcome, <span th:text="${userLogin.username}"></span></h2>
+    <a href="/student/create">Create student</a>
+    <hr>
+</header>
+<footer th:fragment="footerStudent">
+    <hr>
+    @Codegym
+</footer>
 </body>
 </html>

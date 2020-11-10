@@ -16,7 +16,7 @@ public class LogStudent {
         String returnType = joinPoint.getSignature().getDeclaringType().getName();
         String methodName = joinPoint.getSignature().getName();
         String argsName = Arrays.toString(joinPoint.getArgs());
-        System.err.printf("O day co loi :)): %s.%s.%s.%s: %s", className    ,
+        System.err.printf("O day co loi :)): %s.%s.%s.%s: %s", className,
                 returnType,
                 methodName,
                 argsName,

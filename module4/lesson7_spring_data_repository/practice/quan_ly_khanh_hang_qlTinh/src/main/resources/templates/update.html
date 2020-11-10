@@ -10,10 +10,10 @@
 <form action="/customer/update" method="post" th:object="${customer}">
     <input type="hidden" th:field="*{id}">
     <label for="name"> Name: </label>
-    <input id="name" th:field="*{name}" />
+    <input id="name" th:field="*{name}"/>
     <br/>
     <label for="address"> Address: </label>
-    <input id="address" th:field="*{address}" /><br/>
+    <input id="address" th:field="*{address}"/><br/>
     <label for="typeCustomer">Type Customer : </label>
     <select id="typeCustomer" th:field="*{typeCustomer}">
         <option th:each="typeCustomer : ${listTypeCustomer} "
