@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create App User</title>
+</head>
+<body>
+<!--<header th:replace="common::headerStudent"></header>-->
+<!--<h2 th:text="#{create.title}"></h2>-->
+
+
+<form action="/createUse1" method="post" th:object="${appUse}">
+    <p>User Name :</p>
+    <input type="text" th:field="*{userName}"/>
+    <p>Password :</p>
+    <input type="password" th:field="*{encrytedPassword}" />
+    <br>
+    <br>
+    <th:block th:each="appRole : ${listAppRole}">
+        <label>
+            <input type="checkbox" name="appRoleList" th:value="${appRole.roleId}" th:text="${appRole.roleName}" />
+        </label>
+    </th:block ><br><br>
+    <br>
+    <br>
+    <input type="submit" value="Create Use" />
+
+</form>
+<!--<footer th:replace="common::footerStudent"></footer>-->
+</body>
+</html>
